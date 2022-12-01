@@ -64,3 +64,16 @@ def retiros(request):
 
     return render(request,"retiros.html", {"form":formulario})
 
+def busquedaLibros(request):
+    return render(request, "busquedaLibros.html")
+
+def buscar(request):
+
+    if request.GET["codigo"]:
+
+        codigo=request.GET["codigo"]
+
+        libritos=Libro.objects.filter(codigo=codigo)
+        return render(request, "resultadosBusqueda.html", {"libros":libritos})
+    else:
+        return render(request, "busquedaLibros.html", {"mensaje":"Ingrese el codigo del libro a buscar"})

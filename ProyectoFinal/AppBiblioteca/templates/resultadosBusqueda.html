@@ -1,0 +1,21 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> RESULTADOS DE LA BUSQUEDA</h1>
+{% endblock %}
+
+
+{% block contenido %}
+
+<ul>
+    {% for libros in libritos %}
+        <li>{{libritos.titulo}}</li>
+        <li>{{libros.tipo}}</li>
+        <li>{{libros.codigo}}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% endblock %}

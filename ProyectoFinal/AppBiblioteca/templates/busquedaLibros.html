@@ -1,0 +1,22 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> BÚSQUEDA DE LIBROS</h1>
+{% endblock %}
+
+
+{% block contenido %}
+
+
+<form action="{% url 'buscar' %}" method="GET"> 
+
+    <input type="number" name="codigo" id="codigo">
+
+    <input type="submit" value="Buscar Libro">
+
+</form>
+
+
+{% endblock %}
