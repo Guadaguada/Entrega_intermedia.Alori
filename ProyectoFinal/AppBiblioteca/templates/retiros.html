@@ -8,6 +8,17 @@
 
 
 {% block contenido %}
-<h3>Este es el contenido que cambia en retiros</h3>
-<p>hola</p>
+<h1>Formulario deretiros</h1>.
+
+<h3>Notifique un retiro</h3>
+
+<form action="{% url 'retiros' %}" method="POST"> {% csrf_token %}
+
+    <table>
+        {{ form.as_table }}
+    </table>
+
+<input type="submit" value="Registar Retiro">
+
+</form>
 {% endblock %}

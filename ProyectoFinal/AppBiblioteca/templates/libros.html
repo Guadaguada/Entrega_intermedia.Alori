@@ -8,5 +8,18 @@
 
 
 {% block contenido %}
-<h3>Este es el contenido que cambia EN LIBROS</h3>
+<h1>Formulario de libros</h1>.
+
+<h3>Ingresar un libro</h3>
+
+<form action="{% url 'libros' %}" method="POST"> {% csrf_token %}
+
+    <table>
+        {{ form.as_table }}
+    </table>
+
+<input type="submit" value="Guardar Libro">
+
+</form>
+
 {% endblock %}

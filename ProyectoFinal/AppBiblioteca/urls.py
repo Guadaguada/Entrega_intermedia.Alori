@@ -6,5 +6,4 @@ urlpatterns = [
     path("afiliados/", afiliados, name="afiliados"),
     path("retiros/", retiros, name="retiros"),
     path("", inicio, name="inicio"),
-    path("librosFormulario/", librosFormulario, name=librosFormulario),
 ]

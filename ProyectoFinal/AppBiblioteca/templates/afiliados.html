@@ -8,5 +8,17 @@
 
 
 {% block contenido %}
-<h3>Este es el contenido que cambia en afiliados</h3>
+
+<form action="{% url 'afiliados' %}" method="POST"> {% csrf_token %}
+
+    <table>
+        {{ form.as_table }}
+    </table>
+
+<input type="submit" value="Guardar Afiliado">
+
+</form>
+
+{{ mensaje }}
+
 {% endblock %}
