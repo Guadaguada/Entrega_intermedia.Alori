@@ -3,14 +3,13 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="mb-5"> TITULO DE retiros</h1>
+<h1 class="mb-5">RETIROS DE LIBROS</h1>
 {% endblock %}
 
 
 {% block contenido %}
-<h1>Formulario deretiros</h1>.
 
-<h3>Notifique un retiro</h3>
+<h3>Cargar retiro:</h3>
 
 <form action="{% url 'retiros' %}" method="POST"> {% csrf_token %}
 

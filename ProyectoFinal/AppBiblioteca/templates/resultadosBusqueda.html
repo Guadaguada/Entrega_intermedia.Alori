@@ -9,13 +9,24 @@
 
 {% block contenido %}
 
+<br>
+<h4>Libro encontrado:</h4>
+<br>
+
+{% if libros%}
 <ul>
-    {% for libros in libritos %}
-        <li>{{libritos.titulo}}</li>
-        <li>{{libros.tipo}}</li>
-        <li>{{libros.codigo}}</li>
+    {% for libritos in libros %}
+        <li>Título: {{libritos.titulo}}</li>
+        <li>Tipo: {{libritos.tipo}}</li>
+        <li>Código: {{libritos.codigo}}</li>
         <br>
     {% endfor %}
 </ul>
+
+{% else %}
+
+<h3> No hay libros registrados con el código ingresado </h3>
+
+{% endif %}
 
 {% endblock %}

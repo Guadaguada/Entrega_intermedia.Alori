@@ -3,11 +3,13 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="mb-5"> TITULO DE afiliados</h1>
+<h1 class="mb-5"> AFILIADOS A LA BIBLIOTECA</h1>
 {% endblock %}
 
 
 {% block contenido %}
+
+<h3>Ingresar afiliado:</h3>
 
 <form action="{% url 'afiliados' %}" method="POST"> {% csrf_token %}
 
@@ -15,7 +17,7 @@
         {{ form.as_table }}
     </table>
 
-<input type="submit" value="Guardar Afiliado">
+<input type="submit" value="Guardar datos">
 
 </form>
 
