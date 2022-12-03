@@ -8,22 +8,14 @@
 
 
 {% block contenido %}
+<br>
+<h4>Ingrese código del libro:</h4>
+<br>
+<form action="{% url 'buscar' %}" method="GET"> 
 
-<div class="container position-relative">
-    <div class="row justify-content-center">
-        <div class="col-xl-4">
-            <form action="{% url 'buscar' %}" method="GET"> 
-                <br>
-                <h4>Ingrese código del libro:</h4>
-                <br>
-                <input type="number" name="codigo" id="codigo">
+<input type="number" name="codigo" id="codigo">
 
-                <input type="submit" value="Buscar Libro">
+<input type="submit" value="Buscar Libro">
 
-            </form>
-        </div>
-    </div>
-</div>
-
-
+</form>
 {% endblock %}

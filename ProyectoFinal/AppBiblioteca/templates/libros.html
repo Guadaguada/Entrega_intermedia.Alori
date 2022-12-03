@@ -8,25 +8,18 @@
 
 
 {% block contenido %}
+<br>
+<h3>Ingrese un libro en la biblioteca:</h3>
+<br>
+<form action="{% url 'libros' %}" method="POST"> {% csrf_token %}
 
-<div class="container position-relative">
-    <div class="row justify-content-center">
-        <div class="col-xl-4">
-            <br>
-            <h3 {text-align: center;} >Ingrese un libro en la biblioteca:</h3>
-            
-                <br action="{% url 'libros' %}" method="POST"> {% csrf_token %}
-
-                <table>
-                    {{ form.as_table }}
-                </table>
-                </br>
-                </form>
-                    <input type="submit" value="Guardar Libro">
-                </form>
-            <br>
-        </div>
-    </div>
-</div>
-
+    <table>
+        {{ form.as_table }}
+    </table>
+<br>
+<input type="submit" value="Guardar Libro">
+</form>
+    
+<br>
+<br>
 {% endblock %}
