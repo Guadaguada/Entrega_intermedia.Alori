@@ -1,0 +1,32 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5"> RESULTADOS DE LA BUSQUEDA</h1>
+{% endblock %}
+
+
+{% block contenido %}
+
+<br>
+<h4>Libro encontrado:</h4>
+<br>
+
+{% if libros%}
+<ul>
+    {% for libritos in libros %}
+        <li>Título: {{libritos.titulo}}</li>
+        <li>Tipo: {{libritos.tipo}}</li>
+        <li>Código: {{libritos.codigo}}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<h3> No hay libros registrados con el código ingresado </h3>
+
+{% endif %}
+
+{% endblock %}

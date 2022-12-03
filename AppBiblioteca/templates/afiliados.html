@@ -1,0 +1,29 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-10">AFILIADOS</h1>
+{% endblock %}
+
+
+{% block contenido %}
+
+
+<br>
+<h3>Ingresar afiliado:</h3>
+<br>
+<form action="{% url 'afiliados' %}" method="POST"> {% csrf_token %}
+
+    <table>
+        {{ form.as_table }}
+    </table>
+<br>
+<input type="submit" value="Guardar datos">
+
+</form>
+      
+
+ {{ mensaje }}
+
+{% endblock %}
