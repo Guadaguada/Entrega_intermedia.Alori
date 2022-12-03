@@ -77,4 +77,5 @@ def buscar(request):
         libritos=Libro.objects.filter(codigo__icontains=codigo)
         return render(request, "resultadosBusqueda.html", {"libros":libritos})
     else:
+        
         return render(request, "busquedaLibros.html", {"mensaje":"Ingrese el codigo del libro a buscar"})
