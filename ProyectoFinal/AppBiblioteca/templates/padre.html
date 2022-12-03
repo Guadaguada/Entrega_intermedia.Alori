@@ -10,7 +10,7 @@
         <meta name="author" content="" />
         <title>Biblioteca - La biblioteca web</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/libro.png' %}" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
@@ -27,6 +27,7 @@
                 <a class="btn btn-primary" href="{% url 'libros' %}">Libros</a>
                 <a class="btn btn-primary" href="{% url 'afiliados' %}">Afiliados</a>
                 <a class="btn btn-primary" href="{% url 'retiros' %}">Retiros</a>
+                <a class="box" href="{% url 'busquedaLibros' %}"><b>Buscar un libro</b></a>
                 
             </div>
         </nav>

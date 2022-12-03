@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Libro,Afiliado,Retiros
 from django.http import HttpResponse
-from django.shortcuts import render
 from AppBiblioteca.forms import LibroForm, AfiliadoForm, RetirosForm
 # Create your views here.
 

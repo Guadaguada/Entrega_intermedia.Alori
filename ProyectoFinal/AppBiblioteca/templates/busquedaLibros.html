@@ -3,21 +3,27 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="mb-5"> BÚSQUEDA DE LIBROS</h1>
+<h1 class="mb-10"> BÚSQUEDA DE LIBROS</h1>
 {% endblock %}
 
 
 {% block contenido %}
 
+<div class="container position-relative">
+    <div class="row justify-content-center">
+        <div class="col-xl-4">
+            <form action="{% url 'buscar' %}" method="GET"> 
+                <br>
+                <h4>Ingrese código del libro:</h4>
+                <br>
+                <input type="number" name="codigo" id="codigo">
 
-<form action="{% url 'buscar' %}" method="GET"> 
+                <input type="submit" value="Buscar Libro">
 
-    <h4>Ingrese código del libro:</h4>
-    <input type="number" name="codigo" id="codigo">
-
-    <input type="submit" value="Buscar Libro">
-
-</form>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}

@@ -3,21 +3,29 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="mb-5">RETIROS DE LIBROS</h1>
+<h1 class="mb-10">RETIROS DE LIBROS</h1>
 {% endblock %}
 
 
 {% block contenido %}
 
-<h3>Cargar retiro:</h3>
+<div class="container position-relative">
+    <div class="row justify-content-center">
+        <div class="col-xl-4">
+            <br>
+            <h3>Cargar retiro:</h3>
+            <br>
 
-<form action="{% url 'retiros' %}" method="POST"> {% csrf_token %}
+            <form action="{% url 'retiros' %}" method="POST"> {% csrf_token %}
 
-    <table>
-        {{ form.as_table }}
-    </table>
+                <table>
+                    {{ form.as_table }}
+                </table>
+            <br>
+            <input type="submit" value="Registar Retiro">
 
-<input type="submit" value="Registar Retiro">
-
-</form>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

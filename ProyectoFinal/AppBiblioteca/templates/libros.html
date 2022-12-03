@@ -3,24 +3,30 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="mb-5">LIBROS DE LA BIBLIOTECA</h1>
+<h1 class="mb-10">LIBROS</h1>
 {% endblock %}
 
 
 {% block contenido %}
 
-<h3>Ingrese un libro en la biblioteca:</h3>
+<div class="container position-relative">
+    <div class="row justify-content-center">
+        <div class="col-xl-4">
+            <br>
+            <h3 {text-align: center;} >Ingrese un libro en la biblioteca:</h3>
+            
+                <br action="{% url 'libros' %}" method="POST"> {% csrf_token %}
 
-<form action="{% url 'libros' %}" method="POST"> {% csrf_token %}
-
-    <table>
-        {{ form.as_table }}
-    </table>
-<br>
-<input type="submit" value="Guardar Libro">
-
-</form>
-<br>
-<a class="navbar-brand" href="{% url 'busquedaLibros' %}">Buscar un libro</a>
+                <table>
+                    {{ form.as_table }}
+                </table>
+                </br>
+                </form>
+                    <input type="submit" value="Guardar Libro">
+                </form>
+            <br>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

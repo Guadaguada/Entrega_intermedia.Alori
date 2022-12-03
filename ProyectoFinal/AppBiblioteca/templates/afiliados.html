@@ -3,23 +3,31 @@
 {% load static %}
 
 {% block titulo %}
-<h1 class="mb-5"> AFILIADOS A LA BIBLIOTECA</h1>
+<h1 class="mb-10">AFILIADOS</h1>
 {% endblock %}
 
 
 {% block contenido %}
 
-<h3>Ingresar afiliado:</h3>
+<div class="container position-relative">
+    <div class="row justify-content-center">
+        <div class="col-xl-4">
+            <br>
+            <h3>Ingresar afiliado:</h3>
+            <br>
 
-<form action="{% url 'afiliados' %}" method="POST"> {% csrf_token %}
+            <form action="{% url 'afiliados' %}" method="POST"> {% csrf_token %}
 
-    <table>
-        {{ form.as_table }}
-    </table>
+                <table>
+                    {{ form.as_table }}
+                </table>
+            <br>
+            <input type="submit" value="Guardar datos">
 
-<input type="submit" value="Guardar datos">
-
-</form>
+            </form>
+        </div>
+    </div>
+</div>
 
 {{ mensaje }}
 
